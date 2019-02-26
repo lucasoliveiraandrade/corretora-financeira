@@ -1,9 +1,3 @@
-# Teste Prático
-
-Então você decidiu encarar este desafio... legal!!
-
-Analise atenciosamente o cenário proposto e siga atentamente as intruções abaixo.
-
 ## Cenário
 
 > <p align="justify">Uma corretora financeira, nova no mercado de ações deseja iniciar o projeto de desenvolvimento de portal para acesso aos clientes. Pretende que seja baseado nos principais padrões de softwares existentes no mercado.</p>
@@ -21,12 +15,6 @@ Analise atenciosamente o cenário proposto e siga atentamente as intruções aba
 1. Elabore o diagrama de Casos de Uso para a situação.
 2. Selecione um caso de uso para elaboração da documentação descritiva que deverá ser desenvolvida a partir do template fornecido ( arquivo **template_avaliação_requisitos.pdf** ).
 
-
-## Instruções para entrega:
-
-- A partir da branch master, crie uma branch com a seguinte nomenclatura: prova-brq-ccee-NOME-SOBRENOME e trabalhe SOMENTE em sua branch;
-- Após finalizar o desenvolvimento, faça um push de sua branch para o gitlab;
-- Se achar necessário crie um arquivo README para indicar a forma de uso de seu código.
 
 ## Obsevações:
 
