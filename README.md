@@ -9,16 +9,3 @@
 > <p align="justify">Tendo acesso ao portal o cliente poderá comprar / vender ações, visualizar a cotação de cada ação. Ele poderá também acessar sua carteira, obtendo informações de todos os investimentos que realizou, contendo a data/hora da operação, valor de compra da ação e quantidade adquirida.</p>
 
 > <p align="justify">O valor das ações vendidas pelo cliente será disponibilizado em sua conta investimento, criada e administrada pela corretora no momento da adesão do cliente.</p>
-
-### Intruções
-
-1. Elabore o diagrama de Casos de Uso para a situação.
-2. Selecione um caso de uso para elaboração da documentação descritiva que deverá ser desenvolvida a partir do template fornecido ( arquivo **template_avaliação_requisitos.pdf** ).
-
-
-## Obsevações:
-
-- O projeto já contém uma classe de conexões (br.brq.com.prova.jdbc.ConnectionFactory) configurada com os parâmetros do banco de dados;
-- Caso necessite consultar o banco de dados, utilize o atalho **MySQL 8.0 Command Line Client** disponível na área de trabalho;
-- Utilizar o workspace_sexta.
-
