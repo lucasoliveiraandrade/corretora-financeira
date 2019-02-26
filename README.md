@@ -1,12 +1,4 @@
-<p align="center">
-	<a href="http://www.brq.com/" title="BRQ Digital Solutions"><img height="80" src="http://www.brq.com/img/brq-digital-solutions.png"/></a>
-	<a href="https://www.ccee.org.br/portal/faces/pages_publico/inicio" title="CCEE - Câmera de Comercialização de Energia Elétrica">
-		<img height="80" src="http://www.abrapch.org.br/admin/arquivos//blog/grande/ccee-logo-120.png"/>
-	</a>
-	<a href="https://developer.oracle.com/java" title="Oracle Java"><img height="90" src="https://www.vectorlogo.zone/logos/java/java-card.png"/></a>
-</p>
-
-# Teste Prático de Java BRQ CCEE
+# Teste Prático
 
 Então você decidiu encarar este desafio... legal!!
 
