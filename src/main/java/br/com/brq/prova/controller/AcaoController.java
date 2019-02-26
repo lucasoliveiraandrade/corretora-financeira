@@ -8,7 +8,6 @@ import javax.validation.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +36,6 @@ public class AcaoController {
 	@Autowired
 	private CotacaoMapper cotacaoMapper;
 
-	@CrossOrigin
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public String criar(@RequestBody @Valid AcaoDTO dto) {
@@ -51,7 +49,6 @@ public class AcaoController {
 		return mapper.toDTO(acao);
 	}
 
-	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<AcaoDTO> buscar() {
 		List<Acao> acoes = service.buscar();

@@ -7,7 +7,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,7 +28,6 @@ public class CotacaoController {
 	@Autowired
 	private CotacaoMapper mapper;
 
-	@CrossOrigin
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public String criar(@RequestBody @Valid CotacaoDTO dto) {
@@ -37,7 +35,6 @@ public class CotacaoController {
 		return service.novo(cotacao).toString();
 	}
 
-	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CotacaoDTO> buscar() {
 		List<Cotacao> cotacoes = service.buscar();

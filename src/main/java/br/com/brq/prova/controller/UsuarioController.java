@@ -10,7 +10,6 @@ import javax.validation.constraints.NotEmpty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,7 +47,6 @@ public class UsuarioController {
 	@Autowired
 	private TransacaoMapper transacaoMapper;
 
-	@CrossOrigin
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public String criar(@RequestBody @Valid UsuarioDTO dto) throws AddressException, MessagingException {
@@ -76,7 +74,6 @@ public class UsuarioController {
 		return mapper.toDTO(usuario);
 	}
 
-	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<UsuarioDTO> buscar() {
 		List<Usuario> usuarios = service.buscar();
@@ -91,7 +88,6 @@ public class UsuarioController {
 		return usuario.getIdUsuario().toString();
 	}
 
-	@CrossOrigin
 	@RequestMapping(value = "/{usuarioId}/carteira", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<TransacaoDTO> buscaCarteiraInvestimento(@PathVariable @NotEmpty String usuarioId) {
 		List<Transacao> transacoes = transacaoService.buscaPorUsuarioId(usuarioId);

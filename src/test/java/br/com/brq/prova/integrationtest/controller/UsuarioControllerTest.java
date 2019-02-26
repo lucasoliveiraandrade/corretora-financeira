@@ -19,7 +19,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = br.com.brq.prova.Configuration.class, webEnvironment = WebEnvironment.MOCK)
+@SpringBootTest(classes = br.com.brq.prova.Configuracao.class, webEnvironment = WebEnvironment.MOCK)
 @AutoConfigureMockMvc
 @TestPropertySource(locations = "classpath:application-integrationtest.yml")
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
