@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="AcaoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Acao</title>
+
+    <link rel="stylesheet" href="../css/style.css"></link>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+
+    <script src="../module/acao.module.js"></script>
+    <script src="../controller/acao.controller.js"></script>
+  </head>
+
+  <body ng-controller="AcaoController">
+        <h1> Cadastro de Ação </h1>
+
+        <form ng-submit="post()">
+            <div class="margin">
+                <label for="descricao"> Descrição: </label><br/>
+                <input type="text" id="acaoDescricao" ng-model="novaAcao.descricao" />
+            </div>
+            
+            <footer class="margin">
+                <button type="submit"> Cadastrar </button>
+            </footer>
+        </form>
+
+
+        <h1> Lista Todas Ações </h1>
+
+        <div class="grid">
+            <div class="gridColumn">
+                <label> Id </label>
+            </div>
+            <div class="gridColumn">
+                <label> Descrição </label>
+            </div>
+        </div>
+
+        <form ng-init="buscaAcoes()">
+            <div ng-repeat="acao in acoes" class="grid">
+                <div class="gridColumn">
+                    <label for="id"> {{ acao.id }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="descricao"> {{ acao.descricao }} </label>
+                </div>
+            </div>
+        </form>
+  </body>

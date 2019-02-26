@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="CotacaoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Cotação</title>
+
+    <link rel="stylesheet" href="../css/style.css"></link>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+
+    <script src="../module/cotacao.module.js"></script>
+    <script src="../controller/cotacao.controller.js"></script>
+  </head>
+
+  <body ng-controller="CotacaoController">
+        <h1> Cadastro de Cotação </h1>
+
+        <form ng-submit="post()">
+            <div class="margin">
+                <label for="valor"> Valor: </label><br/>
+                <input type="text" id="cotacaoValor" ng-model="novaCotacao.valor" />
+            </div>
+            <div class="margin">
+                <label for="data"> Data: </label><br/>
+                <input type="text" id="cotacaoData" ng-model="novaCotacao.data" />
+            </div>
+            <div class="margin">
+                <label for="acao"> Ação: </label><br/>
+                <input type="text" id="cotacaoAcao" ng-model="novaCotacao.acao" />
+            </div>
+            <footer class="margin">
+                <button type="submit"> Cadastrar </button>
+            </footer>
+        </form>
+
+        <h1> Lista Todas Cotações</h1>
+
+        <div class="grid">
+            <div class="gridColumn">
+                <label> Valor </label>
+            </div>
+            <div class="gridColumn">
+                <label> Data </label>
+            </div>         
+        </div>
+
+        <form ng-init="buscaCotacoes()">
+            <div ng-repeat="cotacao in cotacoes" class="grid">
+                <div class="gridColumn">
+                    <label for="nome"> {{ cotacao.valor }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="cpf"> {{ cotacao.data }} </label>
+                </div>
+            </div>
+        </form>
+  </body>

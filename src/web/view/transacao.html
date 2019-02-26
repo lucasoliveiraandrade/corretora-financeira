@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="TransacaoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Transacao</title>
+
+    <link rel="stylesheet" href="../css/style.css"></link>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+
+    <script src="../module/transacao.module.js"></script>
+    <script src="../controller/transacao.controller.js"></script>
+  </head>
+
+  <body ng-controller="TransacaoController">
+        <h1> Cadastro de Transacao </h1>
+
+        <form ng-submit="post()">
+            <div class="margin">
+                <label for="tipo"> Tipo: </label><br/>
+                <input type="text" id="transacaoTipo" ng-model="novaTransacao.tipo" />
+            </div>
+            <div class="margin">
+                <label for="quantidade"> Quantidade: </label><br/>
+                <input type="text" id="transacaoQuantidade" ng-model="novaTransacao.quantidade" />
+            </div>
+            <div class="margin">
+                <label for="data"> Data: </label><br/>
+                <input type="text" id="transacaoData" ng-model="novaTransacao.data" />
+            </div>
+            <div class="margin">
+                <label for="usuario"> Usuario: </label><br/>
+                <input type="text" id="transacaoUsuario" ng-model="novaTransacao.usuario" />
+            </div>
+            <div class="margin">
+                <label for="cotacao"> Cotacao: </label><br/>
+                <input type="text" id="transacaoCotacao" ng-model="novaTransacao.cotacao" />
+            </div>
+            <footer class="margin">
+                <button type="submit"> Cadastrar </button>
+            </footer>
+        </form>
+  </body>

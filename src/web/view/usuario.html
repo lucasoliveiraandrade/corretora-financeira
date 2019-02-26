@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html ng-app="UsuarioApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Usuario</title>
+
+    <link rel="stylesheet" href="../css/style.css"></link>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+
+    <script src="../module/usuario.module.js"></script>
+    <script src="../controller/usuario.controller.js"></script>
+  </head>
+
+  <body ng-controller="UsuarioController">
+        <h1> Cadastro de Usuario </h1>
+
+        <form ng-submit="post()">
+            <div class="margin">
+                <label for="nome"> Nome: </label><br/>
+                <input type="text" id="usuarioNome" ng-model="novoUsuario.nome" />
+            </div>
+            <div class="margin">
+                <label for="cpf"> CPF: </label><br/>
+                <input type="text" id="usuarioCPF" ng-model="novoUsuario.cpf" />
+            </div>
+            <div class="margin">
+                <label for="usuario"> Usuario: </label><br/>
+                <input type="text" id="usuarioUsuario" ng-model="novoUsuario.usuario" />
+            </div>
+            <div class="margin">
+                <label for="senha"> Senha: </label><br/>
+                <input type="text" id="usuarioSenha" ng-model="novoUsuario.senha" />
+            </div>
+            <div class="margin">
+                <label for="email"> Email: </label><br/>
+                <input type="text" id="usuarioEmail" ng-model="novoUsuario.email" />
+            </div>
+            <footer class="margin">
+                <button type="submit"> Cadastrar </button>
+            </footer>
+        </form>
+
+        <h1> Lista Todos Usuário</h1>
+
+        <div class="grid">
+            <div class="gridColumn">
+                <label> Nome </label>
+            </div>
+            <div class="gridColumn">
+                <label> CPF </label>
+            </div>
+            <div class="gridColumn">
+                <label> Usuário </label>
+            </div>
+            <div class="gridColumn">
+                <label> Senha </label>
+            </div>
+            <div class="gridColumn">
+                <label> Email </label>
+            </div>
+            <div class="gridColumn">
+                <label> Status </label>
+            </div>
+        </div>
+
+        <form ng-init="buscaUsuarios()">
+            <div ng-repeat="usuario in usuarios" class="grid">
+                <div class="gridColumn">
+                    <label for="nome"> {{ usuario.nome }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="cpf"> {{ usuario.cpf }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="usuario"> {{ usuario.usuario }}</label>
+                </div>
+                <div class="gridColumn">
+                    <label for="senha"> {{ usuario.senha }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="email"> {{ usuario.email }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="status"> {{ usuario.status }} </label>
+                </div>
+            </div>
+        </form>
+
+        <h1> Carteira de Invetimento</h1>
+
+
+        <form ng-submit="buscaCarteiraInvestimento(usuarioId)">
+            <label for="nome"> Entre com usuario para ver a carteira de investimento: </label><br/>
+            <input type="text" id="usuarioId" ng-model="usuarioId" />
+            <button type="submit"> Pesquisar </button>
+        </form>
+
+        <div class="grid">
+            <div class="gridColumn">
+                <label> Data </label>
+            </div>
+            <div class="gridColumn">
+                <label> Tipo </label>
+            </div>
+            <div class="gridColumn">
+                <label> Valor </label>
+            </div>
+            <div class="gridColumn">
+                <label> Quantidade </label>
+            </div>
+            <div class="gridColumn">
+                <label> Usuario </label>
+            </div>
+        </div>
+
+        <form ng-init="buscaTransacoes()">
+            <div ng-repeat="transacao in transacoes" class="grid">
+                <div class="gridColumn">
+                    <label for="data"> {{ transacao.data }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="tipoOperacao"> {{ transacao.tipoOperacao }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="valor"> {{ transacao.cotacao.valor }}</label>
+                </div>
+                <div class="gridColumn">
+                    <label for="quantidade"> {{ transacao.quantidade }} </label>
+                </div>
+                <div class="gridColumn">
+                    <label for="usuario"> {{ transacao.usuario.nome }} </label>
+                </div>
+            </div>
+        </form>
+  </body>

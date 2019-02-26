@@ -1,0 +1,16 @@
+.margin {
+    margin: 25px;
+  }
+  
+  .grid {
+    width: 100%;
+  }
+  
+  .gridColumn {
+    width: 15%;
+    display: inline-block;
+  }
+  
+  #deleteForm{
+    margin-top: 25px;
+  }

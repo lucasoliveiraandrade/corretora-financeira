@@ -1,0 +1,27 @@
+server:
+  port: 8080
+#  servlet:
+#     context-path: /ccee/
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost/ccee?useUnicode=true&serverTimezone=UTC&autoReconnect=true&useSSL=false
+ #   username: candidato
+ #   password: 123456
+    username: root
+    password: senha123456
+
+email:
+  from: mensagem@valeanuncios.com   # conta do meu projeto pessoal (ver CV)
+  user: mensagem@valeanuncios.com
+  password: d8a89dysa7ytdstd2T3eAAu38sja32Y89hj23d
+  smtp:
+    host: smtp.zoho.com
+  localhost: http://localhost:8080/
+  ativado: false

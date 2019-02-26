@@ -1,0 +1,327 @@
+{
+	"info": {
+		"name": "CCEE",
+		"_postman_id": "a3b1d2ec-76ea-c1ad-19d6-2e6e20f70607",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"description": "",
+			"item": [
+				{
+					"name": "Create usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\":\"lucas\",\n  \"cpf\":\"123.123.123-12\",\n  \"usuario\":\"lucas123\",\n  \"senha\":\"12345\",\n  \"email\":\"lucas.andrade999@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Get usuario by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "get todos usuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "deleta usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios",
+								"1"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "update usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\":\"1\",\n    \"nome\": \"lucas2\",\n    \"cpf\": \"123.123.123-12\",\n    \"usuario\": \"lucas123x\",\n    \"senha\": \"123452\",\n    \"codigoBovespa\": \"123\",\n    \"email\": \"lucas123@email.com\",\n    \"status\": \"ATIVO\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Acao",
+			"description": "",
+			"item": [
+				{
+					"name": "get acao por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/acoes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"acoes",
+								"2"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get todas acoes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/api/acoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"acoes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "cria nova acao",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"descricao\": \"acao 001\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/acoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"acoes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cotacao",
+			"description": "",
+			"item": [
+				{
+					"name": "cria cotacao",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"valor\": \"123\",\n\t\"data\": \"2000-09-27\", \n\t\"acao\": \n\t\t{\n\t\t    \"id\": \"2\",\n\t\t    \"descricao\": \"acao 001\"\n\t\t}\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cotacoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cotacoes"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transacao",
+			"description": "",
+			"item": []
+		},
+		{
+			"name": "cria transacao",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tipoOperacao\":\"COMPRA\",\n\t\"quantidade\": \"1\",\n\t\"data\": \"2000-09-27\", \n\t\"usuario\": {\n        \"id\": \"14\"\n    },\n\t\"cotacao\": {\n\t\t\"id\": \"1\",\n\t\t\"data\": \"2000-09-27\",\n\t\t\"valor\": \"123\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/transacoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"transacoes"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
